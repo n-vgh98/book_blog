@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+    list books
+{% endblock %}
+{% block content %}
+    {% for item in ketabha %}
+    <a href="{% url 'detail_book' item.id %}"><h1>{{ item.title }}</h1></a>
+    {% endfor %}
+{% endblock %}
