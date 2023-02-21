@@ -12,5 +12,11 @@ class AdminAuthor(admin.ModelAdmin):
     list_filter = ('status',)
 
 
+class AdminCategory(admin.ModelAdmin):
+    list_display = ('title', 'status')
+    list_filter = ('status',)
+
+
 admin.site.register(Book, AdminBook)
 admin.site.register(Author, AdminAuthor)
+admin.site.register(Category, AdminCategory)
